@@ -1,10 +1,8 @@
-module Morph ( normalForm
-             , Morph
-             , makeMorph
-             )
-where
-import Morph.Query (makeMorph, normalWord, word, morphBase)
+module Text.Morphology.Russian ( Morph, normalForm, makeMorph ) where
+                       
 import Data.Text (Text)
+import Text.Morphology.Russian.Query (makeMorph, normalWord, word, morphBase)
+
 
 type Morph = Text -> [Text]
 

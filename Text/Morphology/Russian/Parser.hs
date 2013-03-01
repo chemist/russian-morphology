@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings, NoMonomorphismRestriction #-}
-module Morph.Parser (
+module Text.Morphology.Russian.Parser (
 parse'
 ) where
 
@@ -15,7 +15,7 @@ import Control.Monad.Reader (liftM, liftIO)
 import Control.Monad.IO.Class (MonadIO)
 import Data.XML.Types (Event)
 
-import Morph.Data (Prefix(..), Ancode(..), FlexiaModel(..), Flexia(..), Lemma(..))
+import Text.Morphology.Russian.Data (Prefix(..), Ancode(..), FlexiaModel(..), Flexia(..), Lemma(..))
 
 
 parserPrefixes:: MonadThrow m => Consumer Event m (Maybe [Maybe Prefix])
@@ -84,7 +84,7 @@ parserBase = tagNoAttr "phpmorphy" $ do
     
 parse':: (MonadIO m, MonadThrow m) => m ([Prefix], [FlexiaModel], [Lemma])
 parse' = do
-     lbs <- liftIO $ L.readFile "Morph/ru_RU-nojo.xml"
+     lbs <- liftIO $ L.readFile "Text/Morphology/Russian/ru_RU-nojo.xml"
      (_,p,f,l) <- parseLBS def lbs $$ force "bad" parserBase
      return (p,f,l)
    

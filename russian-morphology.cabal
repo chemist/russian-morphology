@@ -16,6 +16,6 @@ build-type:          Simple
 cabal-version:       >=1.8
 
 library
-  exposed-modules:     Morph, Morph.Data, Morph.Query, Morph.Parser
+  exposed-modules:     Text.Morphology.Russian, Text.Morphology.Russian.Data, Text.Morphology.Russian.Query, Text.Morphology.Russian.Parser
   -- other-modules:       
   build-depends:       base ==4.5.*, text ==0.11.*, bytestring ==0.9.*, binary ==0.5.*, containers ==0.4.*, resourcet ==0.4.*, conduit ==1.0.*, xml-conduit ==1.1.*, mtl ==2.1.*, transformers ==0.3.*, xml-types ==0.3.*

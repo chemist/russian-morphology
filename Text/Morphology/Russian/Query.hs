@@ -1,7 +1,7 @@
-module Morph.Query where 
+module Text.Morphology.Russian.Query where 
 
-import Morph.Data 
-import Morph.Parser 
+import Text.Morphology.Russian.Data 
+import Text.Morphology.Russian.Parser 
 import Data.Text (Text, pack, inits, tails, empty, length, drop, take)
 import qualified Data.Text as T
 import qualified Data.Map as Map

@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Morph.Data ( Prefix(..)
+module Text.Morphology.Russian.Data ( Prefix(..)
                   , Ancode(..)
                   , FlexiaModel(..)
                   , Flexia(..)
