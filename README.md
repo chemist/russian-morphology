@@ -17,9 +17,9 @@ Usage:
 -----
     > import Morph
     > makeMorph
-    create binary fail with morphology base
+    create binary file with morphology base
     > normal <- normalForm
-    load binary fail, and return IO Morph
+    load binary file, and return IO Morph
     > let check = normal (pack "есть")
     > check
     ["\1073\1099\1090\1100","\1077\1089\1090\1100","\1077\1089\1090\1100"]
