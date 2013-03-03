@@ -1,3 +1,5 @@
+-- | for developing only 
+--
 module Paths_rumorphology where
 
 getDataFileName ::FilePath -> IO FilePath
