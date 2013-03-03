@@ -82,9 +82,9 @@ parserBase = tagNoAttr "phpmorphy" $ do
 
 
     
-parse':: (MonadIO m, MonadThrow m) => m ([Prefix], [FlexiaModel], [Lemma])
-parse' = do
-     lbs <- liftIO $ L.readFile "Text/Morphology/Russian/ru_RU-nojo.xml"
+parse':: (MonadIO m, MonadThrow m) => String -> m ([Prefix], [FlexiaModel], [Lemma])
+parse' path = do
+     lbs <- liftIO $ L.readFile path
      (_,p,f,l) <- parseLBS def lbs $$ force "bad" parserBase
      return (p,f,l)
    

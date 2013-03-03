@@ -11,6 +11,7 @@ import Data.Maybe (fromMaybe)
 import qualified Data.Set as Set
 import Prelude hiding (length, take, drop)
 import Control.Monad (liftM)
+import Paths_rumorphology 
 
 splitLemmFlex::Text -> [(Text,Text)]
 splitLemmFlex a = zip (inits a) (tails a)
@@ -18,14 +19,18 @@ splitLemmFlex a = zip (inits a) (tails a)
 
 makeMorph::IO ()
 makeMorph = do
-    (_,f,l) <- parse'
+    path <- getDataFileName "ru_RU-nojo.xml"
+    (_,f,l) <- parse' path
     let morph = Morph (makeLMap l) (makeFMap f) (makePrefixMap $ concatMap flexias f)
-    L.writeFile "morph.bin" $ encode morph
+    dir <- getDataDir
+    L.writeFile (dir ++ "/morph.bin") $ encode morph
     where
       makeFMap xs = Map.fromList $ map (\(FlexiaModel i f) -> (i,makeFlMap f)) xs
       
 morphBase ::  IO Morph
-morphBase = liftM decode (L.readFile "morph.bin")
+morphBase = do
+    morph <- getDataFileName "morph.bin"
+    liftM decode $ L.readFile morph
 
 insertFlexia::Flexia -> FlMap -> FlMap
 insertFlexia flexia' = Map.insertWith f key value 

@@ -9,9 +9,9 @@ Just make normal form from word.
 
 Install
 -------
-> cabal configure
-> cabal build
-> cabal install
+    > cabal configure
+    > cabal build
+    > cabal install
 
 Usage:
 -----
