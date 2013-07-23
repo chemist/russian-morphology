@@ -1,0 +1,134 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, a
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+:focus {outline: 0;}
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;}
+header, nav, section, article, aside, footer {display: block;}
+body {
+	background: #eceae8 url(../img/bg.png);
+	font: 14px/20px Arial, Tahoma, Verdana, sans-serif;}
+a {
+	color: #555;
+	outline: none;
+	text-decoration: none;}
+a:hover {text-decoration: none;}
+p {margin: 0 0 18px}
+img {border: none;}
+input {vertical-align: middle;}
+
+
+/* Additional */
+#head, #footer, #input {
+	min-width: 800px;
+	text-align: center;
+	text-shadow: #fff 0 1px 0;}
+#head {
+	color: #555;
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 40px;
+	margin: 100px 0 50px;}
+#footer {
+	font-size: 13px;
+	margin: 20px 0;}
+
+
+/* TABS */
+.tabs {
+    position: relative;
+    margin: 0 auto;
+	width: 800px;}
+.tabs label {
+	display: block;
+	float: left;
+	background: #ffffff;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQlIiBzdG9wLWNvbG9yPSIjZWZmMGY0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGVlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top,  #ffffff 0%, #eff0f4 4%, #dddee0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(4%,#eff0f4), color-stop(100%,#dddee0));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#eff0f4 4%,#dddee0 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#eff0f4 4%,#dddee0 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#eff0f4 4%,#dddee0 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#eff0f4 4%,#dddee0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddee0',GradientType=0 );
+	-moz-border-radius: 6px 6px 0 0;
+	-webkit-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+	border-right: 1px solid #f3f3f3;
+	border-left: 1px solid #ccc;
+	color: #555;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 15px;
+	position: relative;
+	top: 2px;
+	width: 150px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: #fff 0 1px 0;
+	z-index: 1;}
+.tabs input {
+	position: absolute;
+	left: -9999px;}
+#tab_1:checked  ~ #tab_l1,
+#tab_2:checked  ~ #tab_l2,
+#tab_3:checked  ~ #tab_l3,
+#tab_4:checked  ~ #tab_l4,
+#tab_5:checked  ~ #tab_l5,
+#tab_6:checked  ~ #tab_l6,
+#tab_7:checked  ~ #tab_l7 {
+	background: #fff;
+	border-color: #fff;
+	top: 0;
+	z-index: 3;}
+
+.tabs_cont {
+	background: #fff;
+	-moz-border-radius: 0 6px 6px 6px;
+	-webkit-border-radius: 0 6px 6px 6px;
+	border-radius: 0 6px 6px 6px;
+	-moz-box-shadow: 0 -2px 3px -2px rgba(0,0,0,0.2), 2px 2px 2px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 -2px 3px -2px rgba(0,0,0,0.2), 2px 2px 2px rgba(0,0,0,0.1);
+	box-shadow: 0 -2px 3px -2px rgba(0,0,0,0.2), 2px 2px 2px rgba(0,0,0,0.1);
+	padding: 20px 25px;
+	position: relative;
+	z-index: 2;}
+.tabs_cont > div {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	opacity: 0;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;}
+
+#tab_1:checked ~ .tabs_cont #tab_c1,
+#tab_2:checked ~ .tabs_cont #tab_c2,
+#tab_3:checked ~ .tabs_cont #tab_c3,
+#tab_4:checked ~ .tabs_cont #tab_c4,
+#tab_5:checked ~ .tabs_cont #tab_c5,
+#tab_6:checked ~ .tabs_cont #tab_c6,
+#tab_7:checked ~ .tabs_cont #tab_c7 {
+	position: static;
+	left: 0;
+	opacity: 1;}
