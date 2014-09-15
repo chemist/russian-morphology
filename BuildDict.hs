@@ -1,5 +1,5 @@
 {-# LANGUAGE ImplicitParams #-}
-module BuildDict where
+module Main where
 import           Control.Applicative              hiding (empty)
 import           Control.Exception
 import           Control.Monad

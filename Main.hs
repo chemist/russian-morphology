@@ -18,7 +18,6 @@ import qualified Data.Vector                   as V
 import           Prelude                       hiding (lookup, map, readFile)
 import qualified Prelude                       as P
 
-import qualified BuildDict                     as B
 import           Control.Monad.IO.Class        (liftIO)
 import           Data
 import           Data.Maybe
